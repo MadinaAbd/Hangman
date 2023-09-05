@@ -1,7 +1,6 @@
 class ConsoleInterface
-
   FIGURES =
-      Dir["#{__dir__}/../data/figures/*.txt"].
+    Dir["#{__dir__}/../data/figures/*.txt"].
       sort.
       map { |file_name| File.read(file_name) }
 
@@ -22,7 +21,7 @@ class ConsoleInterface
     if @game.won?
       puts "Вы выиграли".colorize(:green)
     elsif @game.lost?
-      puts "Вы проиграли, загаданное слово #{@game.word}".colorize(color: :red, :background => :light_green)
+      puts "Вы проиграли, загаданное слово #{@game.word}".colorize(color: :red, background: :light_green)
     end
   end
 
@@ -39,7 +38,7 @@ class ConsoleInterface
   end
 
   def get_input
-    print "Введите следующую букву: ".colorize(color: :green, :background => :grey)
-    letter = gets[0].upcase
+    print "Введите следующую букву: ".colorize(color: :green, background: :grey)
+    gets[0].upcase
   end
 end

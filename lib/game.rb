@@ -59,6 +59,8 @@ class Game
     (normalized_letters - @user_guseses).empty?
   end
 
+  private
+
   def normalized_letters
     @letters.map { |letter| self.class.normalize_letter(letter) }
   end
