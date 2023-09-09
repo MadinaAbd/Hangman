@@ -2,7 +2,7 @@ require "colorize"
 require_relative "lib/console_interface"
 require_relative "lib/game"
 
-puts "Привет, угадай слово".colorize(color: :white, :background => :yellow)
+puts "Привет, угадай слово".colorize(color: :white, background: :yellow)
 
 word = File.readlines("#{__dir__}/data/words.txt", chomp: true).sample
 
